@@ -95,48 +95,13 @@ const AppRoutes: React.FC = () => {
 };
 
 function App() {
-  // Ultra-simple debug without state
   return (
-    <div style={{ padding: '20px', fontFamily: 'Arial' }}>
-      <h1>🔧 Ultra Debug Mode</h1>
-      <p>If you see this, React is working fine.</p>
-      
-      <div style={{ 
-        padding: '20px', 
-        backgroundColor: '#dbeafe', 
-        marginTop: '20px',
-        border: '2px solid #3b82f6'
-      }}>
-        <h2 style={{ color: '#1e40af' }}>Step 2 Test - Inline Styles</h2>
-        <p style={{ color: '#2563eb' }}>This should have a blue background if CSS works.</p>
-      </div>
-      
-      <div style={{ marginTop: '20px' }}>
-        <button 
-          onClick={() => {
-            console.log('Button clicked!');
-            alert('JavaScript is working!');
-          }}
-          style={{ 
-            backgroundColor: '#3b82f6', 
-            color: 'white', 
-            padding: '10px 16px', 
-            borderRadius: '4px', 
-            border: 'none',
-            cursor: 'pointer'
-          }}
-        >
-          Test JavaScript
-        </button>
-      </div>
-      
-      <div style={{ marginTop: '20px', padding: '10px', backgroundColor: '#fee2e2' }}>
-        <p><strong>Debug Info:</strong></p>
-        <p>• React: Working if you see this</p>
-        <p>• CSS: Working if box above is blue</p>
-        <p>• JS: Click button to test</p>
-      </div>
-    </div>
+    <ThemeProvider>
+      <AuthProvider>
+        <EnvironmentCheck />
+        <AppRoutes />
+      </AuthProvider>
+    </ThemeProvider>
   );
 }
 
