@@ -1,0 +1,308 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --primary-color: #3045FF;
+    --primary-hover: #1D29CC;
+    --primary-text: #0A0E33;
+    --primary-bg: #ECEEFF;
+    --card-bg: #FFFFFF;
+    
+    /* Color scheme variables */
+    --color-primary-50: 236, 238, 255;
+    --color-primary-100: 219, 222, 255;
+    --color-primary-200: 191, 197, 255;
+    --color-primary-300: 163, 172, 255;
+    --color-primary-400: 135, 147, 255;
+    --color-primary-500: 48, 69, 255;
+    --color-primary-600: 29, 41, 204;
+    --color-primary-700: 22, 31, 153;
+    --color-primary-800: 15, 21, 102;
+    --color-primary-900: 8, 11, 51;
+
+    --color-secondary-50: 248, 250, 252;
+    --color-secondary-100: 241, 245, 249;
+    --color-secondary-200: 226, 232, 240;
+    --color-secondary-300: 203, 213, 225;
+    --color-secondary-400: 148, 163, 184;
+    --color-secondary-500: 100, 116, 139;
+    --color-secondary-600: 71, 85, 105;
+    --color-secondary-700: 51, 65, 85;
+    --color-secondary-800: 30, 41, 59;
+    --color-secondary-900: 15, 23, 42;
+
+    --color-accent-50: 254, 242, 242;
+    --color-accent-100: 254, 226, 226;
+    --color-accent-200: 254, 202, 202;
+    --color-accent-300: 252, 165, 165;
+    --color-accent-400: 248, 113, 113;
+    --color-accent-500: 239, 68, 68;
+    --color-accent-600: 220, 38, 38;
+    --color-accent-700: 185, 28, 28;
+    --color-accent-800: 153, 27, 27;
+    --color-accent-900: 127, 29, 29;
+
+    --color-success-50: 240, 253, 244;
+    --color-success-100: 220, 252, 231;
+    --color-success-200: 187, 247, 208;
+    --color-success-300: 134, 239, 172;
+    --color-success-400: 74, 222, 128;
+    --color-success-500: 34, 197, 94;
+    --color-success-600: 22, 163, 74;
+    --color-success-700: 21, 128, 61;
+    --color-success-800: 22, 101, 52;
+    --color-success-900: 20, 83, 45;
+
+    --color-warning-50: 255, 251, 235;
+    --color-warning-100: 254, 243, 199;
+    --color-warning-200: 253, 230, 138;
+    --color-warning-300: 252, 211, 77;
+    --color-warning-400: 251, 191, 36;
+    --color-warning-500: 245, 158, 11;
+    --color-warning-600: 217, 119, 6;
+    --color-warning-700: 180, 83, 9;
+    --color-warning-800: 146, 64, 14;
+    --color-warning-900: 120, 53, 15;
+
+    --color-error-50: 254, 242, 242;
+    --color-error-100: 254, 226, 226;
+    --color-error-200: 254, 202, 202;
+    --color-error-300: 252, 165, 165;
+    --color-error-400: 248, 113, 113;
+    --color-error-500: 239, 68, 68;
+    --color-error-600: 220, 38, 38;
+    --color-error-700: 185, 28, 28;
+    --color-error-800: 153, 27, 27;
+    --color-error-900: 127, 29, 29;
+  }
+
+  /* Default color scheme - Light */
+  .scheme-default {
+    --primary-color: #3045FF;
+    --primary-hover: #1D29CC;
+    --primary-text: #0A0E33;
+    --primary-bg: #F8FAFC;
+    --card-bg: #FFFFFF;
+  }
+
+  /* Default color scheme - Dark */
+  .dark.scheme-default {
+    --primary-color: #4F5FFF;
+    --primary-hover: #6B73FF;
+    --primary-text: #F1F5F9;
+    --primary-bg: #0F172A;
+    --card-bg: #1E293B;
+  }
+
+  /* Blue color scheme - Light */
+  .scheme-blue {
+    --primary-color: #3B82F6;
+    --primary-hover: #2563EB;
+    --primary-text: #1E40AF;
+    --primary-bg: #F0F9FF;
+    --card-bg: #FFFFFF;
+  }
+
+  /* Blue color scheme - Dark */
+  .dark.scheme-blue {
+    --primary-color: #60A5FA;
+    --primary-hover: #93C5FD;
+    --primary-text: #F1F5F9;
+    --primary-bg: #0F172A;
+    --card-bg: #1E293B;
+  }
+
+  /* Green color scheme - Light */
+  .scheme-green {
+    --primary-color: #10B981;
+    --primary-hover: #059669;
+    --primary-text: #065F46;
+    --primary-bg: #F0FDF4;
+    --card-bg: #FFFFFF;
+  }
+
+  /* Green color scheme - Dark */
+  .dark.scheme-green {
+    --primary-color: #34D399;
+    --primary-hover: #6EE7B7;
+    --primary-text: #F1F5F9;
+    --primary-bg: #0F172A;
+    --card-bg: #1E293B;
+  }
+
+  /* Purple color scheme - Light */
+  .scheme-purple {
+    --primary-color: #8B5CF6;
+    --primary-hover: #7C3AED;
+    --primary-text: #5B21B6;
+    --primary-bg: #FAF5FF;
+    --card-bg: #FFFFFF;
+  }
+
+  /* Purple color scheme - Dark */
+  .dark.scheme-purple {
+    --primary-color: #A78BFA;
+    --primary-hover: #C4B5FD;
+    --primary-text: #F1F5F9;
+    --primary-bg: #0F172A;
+    --card-bg: #1E293B;
+  }
+
+  /* Orange color scheme - Light */
+  .scheme-orange {
+    --primary-color: #F97316;
+    --primary-hover: #EA580C;
+    --primary-text: #C2410C;
+    --primary-bg: #FFF7ED;
+    --card-bg: #FFFFFF;
+  }
+
+  /* Orange color scheme - Dark */
+  .dark.scheme-orange {
+    --primary-color: #FB923C;
+    --primary-hover: #FDBA74;
+    --primary-text: #F1F5F9;
+    --primary-bg: #0F172A;
+    --card-bg: #1E293B;
+  }
+
+  /* Black color scheme - Light */
+  .scheme-black {
+    --primary-color: #000000;
+    --primary-hover: #1F1F1F;
+    --primary-text: #1F1F1F;
+    --primary-bg: #F5F5F5;
+    --card-bg: #FFFFFF;
+  }
+
+  /* Black color scheme - Dark */
+  .dark.scheme-black {
+    --primary-color: #6B7280;
+    --primary-hover: #9CA3AF;
+    --primary-text: #F9FAFB;
+    --primary-bg: #111827;
+    --card-bg: #1F2937;
+  }
+
+  html {
+    @apply bg-[var(--primary-bg)] text-[var(--primary-text)] transition-colors duration-300;
+  }
+
+  body {
+    @apply bg-[var(--primary-bg)] text-[var(--primary-text)] transition-colors duration-300;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply text-[var(--primary-text)];
+  }
+
+  .btn-primary {
+    @apply bg-[var(--primary-color)] hover:bg-[var(--primary-hover)] text-white;
+  }
+
+  .text-primary {
+    @apply text-[var(--primary-color)];
+  }
+
+  .bg-primary {
+    @apply bg-[var(--primary-color)];
+  }
+
+  .card {
+    @apply bg-[var(--card-bg)] rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-all duration-300;
+  }
+
+  /* Dark mode specific adjustments */
+  .dark {
+    color-scheme: dark;
+  }
+
+  .dark .bg-white {
+    @apply bg-[var(--card-bg)];
+  }
+
+  .dark .bg-gray-50 {
+    @apply bg-gray-800;
+  }
+
+  .dark .bg-gray-100 {
+    @apply bg-gray-700;
+  }
+
+  .dark .text-gray-900 {
+    @apply text-gray-100;
+  }
+
+  .dark .text-gray-800 {
+    @apply text-gray-200;
+  }
+
+  .dark .text-gray-700 {
+    @apply text-gray-300;
+  }
+
+  .dark .text-gray-600 {
+    @apply text-gray-400;
+  }
+
+  .dark .border-gray-200 {
+    @apply border-gray-700;
+  }
+
+  .dark .border-gray-300 {
+    @apply border-gray-600;
+  }
+
+  .dark .shadow-sm {
+    @apply shadow-gray-900/20;
+  }
+
+  .dark .shadow-md {
+    @apply shadow-gray-900/30;
+  }
+
+  .dark .shadow-lg {
+    @apply shadow-gray-900/40;
+  }
+
+  /* Override specific Tailwind classes in dark mode */
+  .dark .bg-gray-50 {
+    background-color: rgb(31 41 55) !important;
+  }
+
+  .dark .bg-white {
+    background-color: var(--card-bg) !important;
+  }
+}
+
+@layer components {
+  .btn {
+    @apply px-4 py-2 rounded-md font-medium transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-offset-2 transform active:scale-95;
+  }
+
+  .btn-secondary {
+    @apply bg-secondary-500 text-white hover:bg-secondary-600 focus:ring-secondary-500;
+  }
+
+  .btn-outline {
+    @apply border-2 border-[var(--primary-text)] text-[var(--primary-text)] hover:bg-[var(--primary-color)] hover:text-white hover:border-[var(--primary-color)] focus:ring-[var(--primary-color)] transition-all duration-200;
+  }
+
+  .form-input {
+    @apply w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-[var(--primary-color)] focus:border-[var(--primary-color)] bg-[var(--card-bg)] text-[var(--primary-text)] transition-colors duration-200;
+  }
+
+  .dark .form-input {
+    @apply border-gray-600 bg-[var(--card-bg)] text-[var(--primary-text)];
+  }
+
+  .form-label {
+    @apply block text-sm font-medium text-[var(--primary-text)] mb-1;
+  }
+
+  .badge {
+    @apply inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium;
+  }
+}
