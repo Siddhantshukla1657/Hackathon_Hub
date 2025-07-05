@@ -9,9 +9,13 @@ const EnvironmentCheck: React.FC = () => {
     supabaseAnonKey && 
     supabaseUrl !== 'your_supabase_url_here' && 
     supabaseAnonKey !== 'your_supabase_anon_key_here' &&
-    !supabaseUrl.includes('placeholder');
+    !supabaseUrl.includes('placeholder') &&
+    supabaseUrl.includes('supabase.co') &&
+    supabaseAnonKey.length > 20;
 
-  if (hasValidConfig) {
+  // In production (Vercel), we assume credentials are properly configured
+  // Only show the setup dialog in development when credentials are clearly missing
+  if (hasValidConfig || import.meta.env.PROD) {
     return null;
   }
 

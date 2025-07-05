@@ -98,7 +98,6 @@ function App() {
   return (
     <ThemeProvider>
       <AuthProvider>
-        <EnvironmentCheck />
         <AppRoutes />
       </AuthProvider>
     </ThemeProvider>
